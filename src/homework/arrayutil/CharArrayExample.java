@@ -52,6 +52,19 @@ public class CharArrayExample {
         //-----------------------------------------------------------------------------------------------
 
         System.out.println();
+        char[] bobArray2 = {'b', 'a', 'b', 'o', 'b', 'a'};
+        boolean IsBob2 = false;
+        char y = 'b';
+        for (int i = 1; i < bobArray.length; i++) {
+            if (bobArray[i] == y && bobArray[i] + 2 == y) ;
+            IsBob2 = true;
+        }
+        System.out.println(IsBob2);
+
+
+        //-----------------------------------------------------------------------------------------------
+
+        System.out.println();
         char[] text = {' ', ' ', 'Բ', 'ա', 'ր', 'և', ' ', ' '};
         for (int i = 0; i < text.length; i++) {
             if (text[i] != ' ') {
