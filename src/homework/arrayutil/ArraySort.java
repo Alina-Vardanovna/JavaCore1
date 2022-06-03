@@ -6,7 +6,7 @@ public class ArraySort {
 
         int[] numbers = {43, 55, 5, -9, 0, 12, 5, 65};
 
-        System.out.print("Մասիվը աճման կարգով՝ ");
+        System.out.print("Մասիվը նվազման կարգով՝ ");
 
         for (int i = numbers.length - 1; i >= 0; i--) {
             for (int j = 0; j < i; j++) {

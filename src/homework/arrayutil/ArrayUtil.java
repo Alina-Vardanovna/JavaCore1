@@ -15,7 +15,7 @@ public class ArrayUtil {
 
         //-----------------------------------------------------------------------------------------------
 
-        int max = array[3];
+        int max = array[0];
         for (int i = 0; i < array.length; i++) {
             if (max < array[i]) {
                 max = array[i];
