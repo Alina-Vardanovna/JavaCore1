@@ -1,9 +1,9 @@
-package homework;
+package homework.javabook.chapter6;
 
 public class PracticeHomework {
 
     long convert(int minutes) {
-        return minutes * 60;
+        return (long) minutes * 60;
     }
 
     int calcAge(int years) {
@@ -15,11 +15,11 @@ public class PracticeHomework {
     }
 
     boolean isSameNum(int a, int b) {
-        return a == b ? true : false;
+        return a == b;
     }
 
     boolean lessThanOrEqualToZero(int number) {
-        return number <= 0 ? true : false;
+        return number <= 0;
     }
 
     boolean reverseBool(boolean value) {
@@ -31,4 +31,3 @@ public class PracticeHomework {
     }
 
 }
-

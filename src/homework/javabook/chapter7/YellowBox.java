@@ -1,21 +1,22 @@
-package homework.javabook.chapter6;
+package homework.javabook.chapter7;
 
-public class Box {
+import homework.javabook.chapter6.Box;
+
+public class YellowBox {
 
     public double width;
     public double height;
     public double depth;
-    public final int WARRANTY_YEAR = 1;
-    // final գլոբալ փոփոխականների անունները ընդունված է դնել մեծատառ:
+    public static String color = "red";
 
-    public Box(double width, double height, double depth) {
+    public YellowBox(double width, double height, double depth) {
         this.width = width;
         this.height = height;
         this.depth = depth;
     }
 
 
-    double volume() {
+    public double volume() {
         return width * height * depth;
     }
 
@@ -24,6 +25,10 @@ public class Box {
         return box.width == this.width
                 && box.height == this.height
                 && box.depth == this.depth;
+    }
+
+    public static void meth() {
+        System.out.println("method");
     }
 
 }

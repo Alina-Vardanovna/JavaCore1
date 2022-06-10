@@ -1,4 +1,4 @@
-package homework.javabook.chapter6.stack;
+package homework.braceChecker;
 
 public class Stack {
 
@@ -24,6 +24,10 @@ public class Stack {
         } else {
             return array[index--];
         }
+    }
+
+    public boolean isEmpty() {
+        return index == -1;
     }
 
 }
