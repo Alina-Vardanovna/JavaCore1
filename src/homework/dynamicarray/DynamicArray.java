@@ -2,14 +2,25 @@ package homework.dynamicarray;
 
 public class DynamicArray {
 
-    int[] array = new int[10];
-    int size = 0;
+    private int[] array = new int[10];
+    private int size = 0;
 
-    void add(int value) {
+    public void add(int value) {
         if (size == array.length) {
             increaseArray();
         }
         array[size++] = value;
+    }
+
+    public void add(int index, int value) {
+        if (size == array.length) {
+            increaseArray();
+        }
+        for (int i = size; i >= index; i--) {
+            array[i] = array[i - 1];
+        }
+        array[index] = value;
+        size++;
     }
 
     private void increaseArray() {
@@ -20,22 +31,23 @@ public class DynamicArray {
         array = temp;
     }
 
-    void print() {
+    public void print() {
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
         }
+        System.out.println();
     }
 
-    boolean isEmpty() {
+    public boolean isEmpty() {
         return size == 0;
     }
 
-    int getByIndex(int i) {
+    public int getByIndex(int i) {
         return i >= 0 && array[i] != 0 ? array[i] : 0;
     }
 
-    int getFirstIndexByValue(int value) {
-        for (int i = 0; i < array.length; i++) {
+    public int getFirstIndexByValue(int value) {
+        for (int i = 0; i < size; i++) {
             if (array[i] == value) {
                 return i;
             }
@@ -43,26 +55,24 @@ public class DynamicArray {
         return -1;
     }
 
-    void set(int index, int value) {
-        if (index >= 0) {
+    public void set(int index, int value) {
+        if (index >= 0 && index < size) {
             array[index] = value;
+        } else {
+            System.out.println("invalid index");
         }
     }
 
-    void add(int index, int value) {
-        if (index < 0 || index > size) {
-            System.out.println("inv");
-        } else {
-            if (size == array.length) {
-                increaseArray();
+    public void delete(int index) {
+        if (index >= 0 && index < size) {
+            for (int i = index; i < size; i++) {
+                array[i] = array[i + 1];
             }
-            for (int i = size; i >= index; i--) {
-                array[i] = array[i - 1];
-            }
-            array[index] = value;
-            size++;
+            size--;
         }
     }
+
 }
+
 
 

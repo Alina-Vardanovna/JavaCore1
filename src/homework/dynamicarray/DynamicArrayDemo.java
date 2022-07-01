@@ -20,15 +20,9 @@ public class DynamicArrayDemo {
         array.add(32);
         array.add(4);
         array.print();
-
-        System.out.println();
-        System.out.println(array.isEmpty());
-        System.out.println(array.getByIndex(2));
-        System.out.println(array.getFirstIndexByValue(4));
-        array.set(4,10);
+        array.set(1,96);
         array.print();
-        System.out.println();
-        array.add(3, 1);
+        array.add(1,999);
         array.print();
 
     }
