@@ -1,7 +1,6 @@
 package homework.books.storage;
 
 import homework.books.model.Book;
-import homework.students.model.Student;
 
 public class BookStorage {
 
@@ -54,7 +53,7 @@ public class BookStorage {
 
     public void printBookByAuthorName(String authorName) {
         for (int i = 0; i < size; i++) {
-            if (array[i].getAuthorName().equals(authorName)) {
+            if (array[i].getAuthor().getName().equals(authorName)) {
                 System.out.println(array[i]);
             }
         }

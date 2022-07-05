@@ -30,7 +30,12 @@ public class StudentDemo {
         boolean run = true;
         while (run) {
             printCommands();
-            int command = Integer.parseInt(scanner.nextLine());
+            int command;
+            try {
+                command = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e) {
+                command = -1;
+            }
             switch (command) {
                 case EXIT:
                     run = false;
@@ -42,7 +47,7 @@ public class StudentDemo {
                     studentStorage.print();
                     break;
                 case Commands.PRINT_STUDENTS_COUNT:
-                    studentStorage.getSize();
+                    System.out.println(studentStorage.getSize());
                     break;
                 case Commands.DELETE_STUDENT_BY_INDEX:
                     deleteStudentByIndex();

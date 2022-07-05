@@ -1,7 +1,5 @@
 package homework.books.model;
 
-import homework.students.model.Lesson;
-
 public class Book {
 
     private String title;
@@ -29,7 +27,7 @@ public class Book {
         this.title = title;
     }
 
-    public Author getAuthorName() {
+    public Author getAuthor() {
         return author;
     }
 

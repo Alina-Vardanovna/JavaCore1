@@ -18,6 +18,7 @@ public interface Commands {
         System.out.println("Please input " + Commands.PRINT_ALL_BOOKS + " for print all books:");
         System.out.println("Please input " + Commands.PRINT_BOOKS_BY_AUTHOR_NAME + " for print books by author name:");
         System.out.println("Please input " + Commands.PRINT_BOOKS_BY_GENRE + " for print books by genre:");
+        System.out.println("Please input " + Commands.PRINT_BOOKS_BY_PRICE_RANGE + " for print books by price range:");
         System.out.println("Please input " + Commands.ADD_AUTHOR + " for add author:");
         System.out.println("Please input " + Commands.PRINT_ALL_AUTHORS + " for print all authors:");
 
