@@ -1,21 +1,21 @@
-package homework.students.storage;
+package homework.books.storage;
 
-import homework.students.model.Student;
+import homework.books.model.User;
 
-public class StudentStorage {
+public class UserStorage {
 
-    private Student[] array = new Student[10];
+    private User[] array = new User[10];
     private int size = 0;
 
-    public void add(Student student) {
+    public void add(User user) {
         if (size == array.length) {
             increaseArray();
         }
-        array[size++] = student;
+        array[size++] = user;
     }
 
     private void increaseArray() {
-        Student[] temp = new Student[array.length + 10];
+        User[] temp = new User[array.length + 10];
         System.arraycopy(array, 0, temp, 0, size);
         array = temp;
     }
@@ -36,24 +36,19 @@ public class StudentStorage {
                 array[index] = array[index + 1];
             }
             size--;
-            System.out.println("Student deleted");
+            System.out.println("User deleted");
         } else {
             System.out.println("Index out of bounds");
         }
     }
 
-    public void printStudentsByLesson(String lessonName) {
+    public User getUserByGmail(String gmail) {
         for (int i = 0; i < size; i++) {
-            if (array[i].getLesson().equals(lessonName)) {
-                System.out.println(array[i]);
+            if (array[i].getGmail().equals(gmail)) {
+                return array[i];
             }
-        }
-    }
-
-    public Student getStudentByIndex(int index) {
-        if (index >= 0 && index < size) {
-            return array[index];
         }
         return null;
     }
+
 }

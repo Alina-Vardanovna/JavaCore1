@@ -1,22 +1,24 @@
-package homework.books.model;
+package homework.students.model;
 
-import homework.books.ourEnum.Gender;
+import homework.books.model.Role;
 
-public class Author {
+public class User extends homework.books.model.User {
 
     private String name;
     private String surname;
     private String gmail;
-    private Gender gender;
+    private String password;
+    private Role role;
 
-    public Author(String name, String surname, String gmail, Gender gender) {
+    public User(String name, String surname, String gmail, String password, Role role) {
         this.name = name;
         this.surname = surname;
         this.gmail = gmail;
-        this.gender = gender;
+        this.password = password;
+        this.role = role;
     }
 
-    public Author() {
+    public User() {
     }
 
     public String getName() {
@@ -43,22 +45,30 @@ public class Author {
         this.gmail = gmail;
     }
 
-    public Gender getGender() {
-        return gender;
+    public String getPassword() {
+        return password;
     }
 
-    public void setGender(Gender gender) {
-        this.gender = gender;
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
     }
 
     @Override
     public String toString() {
-        return "Author{" +
+        return "User{" +
                 "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", gmail='" + gmail + '\'' +
-                ", gender=" + gender +
+                ", role=" + role +
                 '}';
-    }
 
+    }
 }

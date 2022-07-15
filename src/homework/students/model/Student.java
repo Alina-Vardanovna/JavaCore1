@@ -8,14 +8,16 @@ public class Student {
     private String phoneNumber;
     private String city;
     private Lesson lesson;
+    private User registeredUser;
 
-    public Student(String name, String surname, int age, String phoneNumber, String city, Lesson lesson) {
+    public Student(String name, String surname, int age, String phoneNumber, String city, Lesson lesson, User registeredUser) {
         this.name = name;
         this.surname = surname;
         this.age = age;
         this.phoneNumber = phoneNumber;
         this.city = city;
         this.lesson = lesson;
+        this.registeredUser = registeredUser;
     }
 
     public Student() {
@@ -69,6 +71,14 @@ public class Student {
         this.lesson = lesson;
     }
 
+    public User getRegisteredUser() {
+        return registeredUser;
+    }
+
+    public void setRegisteredUser(User registeredUser) {
+        this.registeredUser = registeredUser;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
@@ -76,8 +86,9 @@ public class Student {
                 ", surname='" + surname + '\'' +
                 ", age=" + age +
                 ", phoneNumber='" + phoneNumber + '\'' +
-                ", lesson='" + lesson + '\'' +
                 ", city='" + city + '\'' +
+                ", lesson=" + lesson +
+                ", registeredUser=" + registeredUser +
                 '}';
     }
 }

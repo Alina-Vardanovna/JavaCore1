@@ -17,9 +17,7 @@ public class LessonStorage {
 
     private void increaseArray() {
         Lesson[] temp = new Lesson[array.length + 10];
-        for (int i = 0; i < size; i++) {
-            temp[i] = array[i];
-        }
+        System.arraycopy(array, 0, temp, 0, array.length);
         array = temp;
     }
 
